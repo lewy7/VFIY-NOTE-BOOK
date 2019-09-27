@@ -1,10 +1,10 @@
 # VFIY-NOTE-BOOK
 1. Javascript &amp; PHP personal notebook. 
-2. Suppport almost all browsers from the era of IE6(include).
+2. Suppport almost all browsers since the era of IE6(include).
 3. Support desktop and mobile platform.
-4. Use AES-256-CTR encrypt user's Data.
+4. Use AES-256-CTR encryptor to protect user's data.
 
-THANK TO Stanford Javascript Crypto Library.http://bitwiseshiftleft.github.com/sjcl/
+THANKS TO Stanford Javascript Crypto Library.http://bitwiseshiftleft.github.com/sjcl/
 
 LICENSE
 
