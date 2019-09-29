@@ -16,7 +16,7 @@ function auth($auth)
         die('{"response":"failure","message":"auth error"}');
     }
 
-    $log = fopen('access.log', 'a+');
+    $log = fopen($data_dir.'access.log', 'a+');
     fprintf($log, "%s,%s,%s,%s\n", $_SERVER['REMOTE_ADDR'], $_GET['action'], $_GET['auth'], date("y-m-d H:i:s", time()));
     fclose($log);
 
