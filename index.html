@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>essay</title>
+  <title>VFIY-NOTE-BOOK</title>
   
   <script type="text/javascript"  charset="utf-8" src="sjcl.js"></script>
   <script type="text/javascript"  charset="utf-8" src="bitArray.js"></script>
@@ -134,7 +134,7 @@
 					+"<h3 onclick='displayScreen(this.parentNode.id)'>"+titleShow+"</h3>"
 					+"<p>"+doAes256ctr_decrypt(json.items[i].text).replace(/\n/g,'<br/>')+"</p>"
 					+"<i>"+json.items[i].date+"</i>"
-					"</div>";
+				        +"</div>";
 		}
 	}
  }
@@ -165,7 +165,7 @@
 					+"<h3 onclick='displayScreen(this.parentNode.id)'>"+titleShow+"<sup class='newlable'>new</sup></h3>"
 					+"<p>"+doAes256ctr_decrypt(json.text).replace(/\n/g,'<br\/>')+"</p>"
 					+"<i>"+json.date+"</i>"
-					"</div>";
+				        +"</div>";
 			
 			start++;
 			document.getElementById("title").value = "";
@@ -327,7 +327,7 @@ function displayScreen(id)
 	.more {text-align:center;display:none;cursor:pointer;padding-top:20px;}
 	.new {text-align:center;;display:none;cursor:pointer;padding-top:120px;}
 	.showArea{margin:0 auto;text-align:center;width:97%;}
-	.showArea div{width: 100%; height:4em; border:#000000 1px solid; overflow:hidden; float:left; margin-left:1px; margin-top:10px; cursor:pointer;}
+	.showArea div{width: 100%; height:4.3em; border:#000000 1px solid; overflow:hidden; float:left; margin-left:1px; margin-top:10px; cursor:pointer;}
 	.showArea h3{ font-size: 0.9em;font-weight:bold; background:#CCCCCC;  border-bottom:#666666 1px solid;margin:0px; padding:0px; text-align:center; line-height:1.2em;}
 	.showArea p{  font-size: 0.8em;text-indent:2em;line-height:1.2em;text-align:left; text-decoration:underline;  margin:3px 3px 0px 3px;}
 	.showArea i{  font-size: 0.5em;margin-top:20px; text-align:right; margin-right:3px; display:block;}
