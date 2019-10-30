@@ -1,8 +1,9 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>VFIY-NOTE-BOOK</title>
+  <title>essay</title>
   
   <script type="text/javascript"  charset="utf-8" src="sjcl.js"></script>
   <script type="text/javascript"  charset="utf-8" src="bitArray.js"></script>
@@ -15,8 +16,9 @@
   <script type="text/javascript">
   var serverPage = "worker.php";
   var xmlHttp;
-  var auth,key,iv,start=0,range=3;
-  
+  var auth,key,iv,start=0,range=20;
+   var bscroll = 0;
+  var dscroll = 0;  
  
   function setKey()
  	{
@@ -134,7 +136,7 @@
 					+"<h3 onclick='displayScreen(this.parentNode.id)'>"+titleShow+"</h3>"
 					+"<p>"+doAes256ctr_decrypt(json.items[i].text).replace(/\n/g,'<br/>')+"</p>"
 					+"<i>"+json.items[i].date+"</i>"
-				        +"</div>";
+					+"</div>";
 		}
 	}
  }
@@ -165,7 +167,7 @@
 					+"<h3 onclick='displayScreen(this.parentNode.id)'>"+titleShow+"<sup class='newlable'>new</sup></h3>"
 					+"<p>"+doAes256ctr_decrypt(json.text).replace(/\n/g,'<br\/>')+"</p>"
 					+"<i>"+json.date+"</i>"
-				        +"</div>";
+					+"</div>";
 			
 			start++;
 			document.getElementById("title").value = "";
@@ -291,12 +293,15 @@ function hideScreen()
 	//document.getElementById("form").style.display='block';
 	document.getElementById("more").style.display='block';
 	//document.getElementById("new").style.display='block';
+	document.body.scrollTop = bscroll;
+	document.documentElement.scrollTop = dscroll;
 }
 
 function displayScreen(id)
 {
 	block = document.getElementById(id);
-
+	bscroll = document.body.scrollTop;
+	dscroll = document.documentElement.scrollTop;
 	sscreen = document.getElementById("screen");
 	for(var i = 0; i < block.childNodes.length; i++) {
 		if(block.childNodes[i].nodeName == "H3")
@@ -371,3 +376,4 @@ function displayScreen(id)
 
 </body>
 </html>
+
